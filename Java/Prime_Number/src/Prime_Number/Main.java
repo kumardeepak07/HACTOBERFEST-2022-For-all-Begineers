@@ -8,11 +8,17 @@ public class Main {
         int n, i, v=0 ;
         System.out.println("Enter a positive number ");
         n= input.nextInt();
-        if ( n==1 || n==0){
+        if ( n < 2){
             System.out.println(n+" is not a prime number. ");
         }
+	else if(n == 2 || n == 3) {
+	    System.out.println(n+" is a prime number ");
+	}
+	else if(n%2 == 0 || n%3 == 0) {
+	    System.out.println(n+" is not a prime number. ");
+	}
         else {
-            for (i=2;i<=n/2;i++){
+            for (i=4;i<=n/2;i++){
                 if(n%i==0){
                     v=1;
                     break;
